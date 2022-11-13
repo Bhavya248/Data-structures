@@ -1,9 +1,13 @@
-n = int(input('provide levels for pattern'))
+try :
+   n = int(input('provide levels for pattern -->  '))
+except ValueError :
+    print("Enter an integral value for n")
+    n = int(input('provide levels for pattern'))
+
 writeable_spaces = 2*n + 1
 star_levels=[]
 for i in range(0,n):
-    star_levels.append(1+2*i)
-print(star_levels)    
+    star_levels.append(1+2*i)    
 for i in range(0,n):
         whites = n-i-1
         pattern = []
@@ -16,5 +20,4 @@ for i in range(0,n):
         for s in pattern:
             print(s,end="")
         print("",end="\n")
-        #print(pattern)
         pattern=[]    

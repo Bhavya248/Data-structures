@@ -10,13 +10,14 @@ if n % 2 == 0 :
 else: 
     count = int((n + 1) / 2)
 inex_a = int((fields+1)/2)
-inex_b = int((fields+1)/2)            
+inex_b = int((fields+1)/2)
+print(pattern_list)            
 for i in range(n):
-    print(pattern)
-    pattern[inex_a]="*"
-    pattern[inex_b]="*"
-    print(" ".join(pattern))
+    pattern_list[i][inex_a-1]="*"
+    pattern_list[i][inex_b-1]="*"
+    print(pattern_list[i])
+    print(" ".join(pattern_list[i]))
     inex_a = inex_a + 1
     inex_b = inex_b - 1
-    pattern = [" "for i in range(2*n+1)]
+print(pattern_list)   
 

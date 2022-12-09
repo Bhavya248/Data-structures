@@ -1,23 +1,17 @@
 n = int(input("Enter a number  "))
-big_list = []
+lista = [[]for i in range(n)]
 num = 2
-for i in range(n):
-    big_list.append([])
-    temp = n
-    while temp >= 1 :
-        big_list[i].append(num+(2*(n - temp)))
-        temp = temp - 1
-    num = num + 1   
-print(big_list)
-temp = n
-while temp >= 1:
-    for i in range(temp,1,-1):
-        del big_list[i-1][temp-1]
-    temp = temp - 1    
+print(lista)
+for i in range(len(lista)) :
+    count = n - i
+    while count >= 1 :
+        lista[i].append(num + (2*())))
+        count = count - 1
+    num = num + 1  
 '''big_list = reversed(big_list)
 for i in range(n):
     pattern = [" "for i in range(2*n + 1)]
 
 
              /'''
-print(big_list)
+print(lista)

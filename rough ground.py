@@ -5,7 +5,7 @@ print(lista)
 for i in range(len(lista)) :
     count = n - i
     while count >= 1 :
-        lista[i].append(num + (2*())))
+        lista[i].append(num + (2*()))
         count = count - 1
     num = num + 1  
 '''big_list = reversed(big_list)

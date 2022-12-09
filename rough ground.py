@@ -11,8 +11,8 @@ for i in range(n):
 print(big_list)
 temp = n
 while temp >= 1:
-    for i in range(temp-1):
-        del big_list[temp-i][i]
+    for i in range(temp,1,-1):
+        del big_list[i-1][temp-1]
     temp = temp - 1    
 '''big_list = reversed(big_list)
 for i in range(n):

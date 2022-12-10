@@ -1,9 +1,4 @@
-try:
-    n = int(input('provide levels for pattern -->  '))
-except ValueError:
-    print("Enter an integral value for n")
-    n = int(input('provide levels for pattern'))
-
+n = int(input('provide levels for pattern --> '))
 writeable_spaces = 2*n + 1
 star_levels = []
 for i in range(0, n):

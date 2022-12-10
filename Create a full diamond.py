@@ -15,3 +15,8 @@ for i in range(len(lista)-1, -1, -1):
         pattern[m] = "*"
     print(" ".join(pattern))
     pattern = [" " for i in range(2*n+1)]
+for i in range(len(lista)):
+    for m in lista[i]:
+        pattern[m] = "*"
+    print(" ".join(pattern))
+    pattern = [" " for i in range(2*n+1)]

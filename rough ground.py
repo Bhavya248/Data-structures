@@ -10,3 +10,8 @@ for i in range(len(lista)) :
         temp = temp + 1
     num = num + 1  
 print(lista)
+pattern = [" " for i in 2*n+1]
+for i in range(len(lista)):
+    for m in lista[i]:
+            pattern[m] = "*"
+    print(" ".join(pattern))

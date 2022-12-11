@@ -12,12 +12,11 @@ for i in range(n):
     print(" ".join(diamond_tree[i]))
 # The next step will now shorten the tree by summing up values
 diamond_tree = diamond_tree[-1]
-temp = n
-while temp > 0:
+while n > 0:
     short = []
     for i in range(int(len(diamond_tree)/2)):
         short.append(str(int(diamond_tree[2*i]) + int(diamond_tree[2*i+1])))
     print(" ".join(short))
     diamond_tree = short  
-    temp = temp - 1
+    n = n- 1
     del short

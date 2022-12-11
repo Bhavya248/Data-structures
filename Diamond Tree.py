@@ -1,3 +1,5 @@
+import time
+t1 = time.perf_counter()
 n = int(input("Enter the value for k -->  "))
 vertical_level = 1 + 2*(n-1)
 horiz_length = []
@@ -20,3 +22,5 @@ while n > 0:
     diamond_tree = short
     n = n - 1
     del short
+t2 = time.perf_counter()
+print("The program took ",(t2-t1)*1000,'Ms to execute')

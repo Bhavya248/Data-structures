@@ -3,6 +3,8 @@
 # for a given value of K
 
 # A Tree node
+import time 
+t1 = time.perf_counter()
 class Node:
 
     def __init__(self, data):
@@ -163,9 +165,11 @@ def createStructure(k):
 # Driver code
 if __name__ == '__main__':
 
-    k = 4
+    k =10
 
     # Print Structure
     createStructure(k)
 
     # This code is contributed by rutvik_56
+t2 = time.perf_counter()
+print((t2-t1)*1000)

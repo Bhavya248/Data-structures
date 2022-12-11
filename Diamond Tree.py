@@ -17,6 +17,6 @@ while n > 0:
     for i in range(int(len(diamond_tree)/2)):
         short.append(str(int(diamond_tree[2*i]) + int(diamond_tree[2*i+1])))
     print(" ".join(short))
-    diamond_tree = short  
-    n = n- 1
+    diamond_tree = short
+    n = n - 1
     del short

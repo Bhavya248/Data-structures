@@ -1,6 +1,7 @@
 import time
-t1 = time.perf_counter()
+
 n = int(input("Enter the value for k -->  "))
+t1 = time.perf_counter()
 vertical_level = 1 + 2*(n-1)
 horiz_length = []
 for i in range(n):

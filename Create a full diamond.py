@@ -1,6 +1,7 @@
+import time
 n = int(input("Enter a number  "))
-istyp = str(input("Full Diamond(F) or inverse diamond(I)"))
-def diamond(n,istyp): 
+def diamond(n):
+    t1 = time.perf_counter() 
     lista = [[]for i in range(n)]
     num = 2
     for i in range(len(lista)):
@@ -11,28 +12,17 @@ def diamond(n,istyp):
             count = count - 1
             temp = temp + 1
         num = num + 1
-    if istyp == "F" :    
+    pattern = [" " for i in range(2*n+3)]
+    for i in range(len(lista)-1, -1, -1):
+            for m in lista[i]:
+                pattern[m] = "*"
+            print(" ".join(pattern))
+            pattern = [" " for i in range(2*n+3)]
+    for i in range(len(lista)):
+        for m in lista[i]:
+            pattern[m] = "*"
+        print(" ".join(pattern))
         pattern = [" " for i in range(2*n+3)]
-        for i in range(len(lista)-1, -1, -1):
-            for m in lista[i]:
-                pattern[m] = "*"
-            print(" ".join(pattern))
-            pattern = [" " for i in range(2*n+3)]
-        for i in range(len(lista)):
-            for m in lista[i]:
-                pattern[m] = "*"
-            print(" ".join(pattern))
-            pattern = [" " for i in range(2*n+3)]
-    else :
-         pattern = ["*" for i in range(2*n+2)]
-         for i in range(len(lista)-1, -1, -1):
-            for m in lista[i]:
-                pattern[m] = ""
-            print(" ".join(pattern))
-            pattern = ["*" for i in range(2*n+2)]
-         for i in range(len(lista)):
-            for m in lista[i]:
-                pattern[m] = ""
-            print(" ".join(pattern))
-            pattern = ["*" for i in range(2*n+2)]
-diamond(n,istyp)
+    t2 = time.perf_counter()
+    print("The program took ",(t2-t1)*1000,'Ms to execute')    
+diamond(n)

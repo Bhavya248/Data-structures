@@ -12,7 +12,6 @@ for i in range(0, n):
         pattern.append(" ")
         
     pattern.append("*"*star_levels[i])
-
     for r in range(whites, 0, -1):
         pattern.append(" ")
     
